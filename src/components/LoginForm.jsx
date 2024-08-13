@@ -7,16 +7,16 @@ const LoginForm = () => {
   const { user, setLoggedInUser, setToken, setUserData, setAppliedJobs } =
     useContext(LocalStorageContext);
 
-  if (user) {
-    return <Navigate to="/" />;
-  }
-
   const INITIAL_STATE = {
     username: "",
     password: "",
   };
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [error, setError] = useState("");
+
+  if (user) {
+    return <Navigate to="/" />;
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;

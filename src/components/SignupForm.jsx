@@ -7,10 +7,6 @@ const SignupForm = () => {
   const { user, setLoggedInUser, setToken, setUserData, setAppliedJobs } =
     useContext(LocalStorageContext);
 
-  if (user) {
-    return <Navigate to="/" />;
-  }
-
   const INITIAL_STATE = {
     username: "",
     password: "",
@@ -21,6 +17,10 @@ const SignupForm = () => {
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [error, setError] = useState("");
 
+  if (user) {
+    return <Navigate to="/" />;
+  }
+  
   const handleChange = ({ target: { name, value } }) => {
     setFormData((formData) => ({
       ...formData,
