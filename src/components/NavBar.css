@@ -1,0 +1,9 @@
+a {
+    margin: 10px;
+} 
+
+nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}

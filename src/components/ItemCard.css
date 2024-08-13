@@ -1,0 +1,15 @@
+.item-card {
+    background-color: black;
+    display: inline-block;
+    margin: 10px auto;
+    height: 20vh;
+    width: 65vw;
+}
+
+span {
+    display: block;
+}
+
+.item-card-link {
+    display: block;
+}
